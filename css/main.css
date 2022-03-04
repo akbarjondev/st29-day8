@@ -216,4 +216,38 @@ body {
           clip-path: inset(50%);
   margin: -1px;
 }
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box1 {
+  width: 100px;
+  height: 400px;
+  border-radius: 18px;
+  background-color: yellow;
+}
+
+.box2 {
+  width: 200px;
+  height: 800px;
+  border-radius: 18px;
+  background-color: red;
+}
+
+.box3 {
+  width: 300px;
+  height: 200px;
+  border-radius: 18px;
+  background-color: blue;
+}
+
+.box4 {
+  width: 200px;
+  height: 350px;
+  border-radius: 56px;
+  background-color: pink;
+}
 /*# sourceMappingURL=main.css.map */

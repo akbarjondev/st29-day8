@@ -1,0 +1,6 @@
+@mixin square($width-size, $height-size, $color, $radius-size: 18px) {
+  width: $width-size;
+  height: $height-size;
+  border-radius: $radius-size;
+  background-color: $color;
+}

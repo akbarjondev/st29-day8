@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+}
+
+.box1 {
+  @include square(100px, 400px, yellow);
+}
+
+.box2 {
+  @include square(200px, 800px, red);
+}
+
+.box3 {
+  @include square(300px, 200px, blue);
+}
+
+.box4 {
+  @include square(200px, 350px, pink, 56px);
+}
