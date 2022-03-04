@@ -190,10 +190,15 @@ template {
           box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  height: 100%;
 }
 
 .container {
@@ -217,37 +222,82 @@ body {
   margin: -1px;
 }
 
-.wrapper {
+.chats {
+  background-color: #0d94d3;
+  background-image: url("./../images/bg.webp");
+  height: 800px;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.box1 {
-  width: 100px;
-  height: 400px;
-  border-radius: 18px;
-  background-color: yellow;
+.chats__curtain {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-.box2 {
-  width: 200px;
-  height: 800px;
-  border-radius: 18px;
-  background-color: red;
+.chats__flow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 24px;
 }
 
-.box3 {
-  width: 300px;
-  height: 200px;
-  border-radius: 18px;
-  background-color: blue;
+.chats .chat {
+  position: relative;
+  background-color: white;
+  color: #333333;
+  padding: 12px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  max-width: 80%;
+  min-width: 200px;
+  border-radius: 4px;
+  z-index: 100;
 }
 
-.box4 {
-  width: 200px;
-  height: 350px;
-  border-radius: 56px;
-  background-color: pink;
+.chats .chat::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  display: block;
+  border-top: 12px solid #ffffff;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid transparent;
+  z-index: 50;
+}
+
+.chats .chat--right {
+  text-align: right;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.chats .chat--right::before {
+  right: -10px;
+  top: 0;
+}
+
+.chats .chat--left::before {
+  left: -10px;
+  top: 0;
 }
 /*# sourceMappingURL=main.css.map */
